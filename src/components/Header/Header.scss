@@ -1,0 +1,57 @@
+@use "../../sass/abstracts/variables" as v;
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 4rem;
+  .logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  .header-right {
+    display: flex;
+    align-items: center;
+
+    .search {
+      margin-left: 0.5rem;
+      position: relative;
+      &-input {
+        min-width: 18.75rem;
+        border: 2px solid rgb(171, 171, 171);
+        padding: 0.4rem 1rem 0.4rem 2rem;
+        border-radius: 3px;
+      }
+      &-icon {
+        // font-size: 1.2rem;
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+      &-with-input {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        left: 10px;
+        color: inherit;
+      }
+      &-box {
+        position: absolute;
+      }
+    }
+  }
+  .menu-mobile {
+    display: none;
+  }
+  @media (max-width: 765px) {
+    .header-container {
+    }
+    .header-right {
+      display: none;
+    }
+    .menu-mobile {
+      display: block;
+    }
+  }
+}
